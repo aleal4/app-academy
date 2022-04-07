@@ -2,7 +2,7 @@
 
 def element_count(arr)
   count = Hash.new(0)
-  arr.each{ |arr| count[arr] += 1 }
+  arr.each{ |ele| count[ele] += 1 }
   return count
 end
 
