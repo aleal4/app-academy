@@ -5,9 +5,11 @@ def element_replace(arr, hash)
   new_arr = []
 
   arr.each do |ele| 
+    # if ele is  a key of the has, then shovel its value
     if hash.has_key?(ele)
       new_arr << hash[ele]
     else
+      # else ele is not a key of the hasn, then shovel the original ele
       new_arr<<ele
     end
   end
