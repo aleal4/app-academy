@@ -9,8 +9,6 @@ def last_index(str, char)
     end
     i -= 1
   end
-
-
 end
 
 puts last_index("abca", "a")       #=> 3
