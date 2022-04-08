@@ -5,8 +5,8 @@ def prime?(num)
     return false
   end
 
-  (2...num).each do |factor|
-    if num % factor == 0
+  (2...num).each do |divisor|
+    if num % divisor == 0
       return false
     end
   end
