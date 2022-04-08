@@ -3,14 +3,18 @@
 # The method should return false otherwise. For example coprime?(25, 12) is true because
 # 1 is the only number that divides both 25 and 12.
 
-def coprime?(num1, num2)    
-  (2..num1).each do |divisor|
-    if num1 % divisor == 0 && num2 % divisor == 0
-      return false
-    end
-  end
+# def coprime?(num1, num2)    
+#   (2..num1).each do |divisor|
+#     if num1 % divisor == 0 && num2 % divisor == 0
+#       return false
+#     end
+#   end
+#   true
+# end
 
-  true
+def coprime?(num1, num2)    
+  (2..num1).none? { |divisor| num1 % divisor == 0 && num2 % divisor == 0 }     
+  
 
 end
 
