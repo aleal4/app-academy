@@ -6,7 +6,7 @@ def max_inject(*arr)
       if num > max
         num
       else
-      max
+        max
     end
   end
 end
