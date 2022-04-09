@@ -7,8 +7,26 @@
 
 def pyramid_sum(base)
 
-    
+  pyramid = [base]
 
+  while pyramid.length < base.length
+    prev_level = pyramid[0]
+    next_level = adjacent_sum(prev_level)
+    pyramid.unshift(next_level)
+  end
+
+  return pyramid
+end
+
+def adjacent_sum(arr)
+  new_arr = []
+  arr.each_with_index do |ele, i|
+    if i != arr.length - 1
+      new_arr << arr[i] + arr[i + 1]
+    end
+  end
+  return new_arr
+  
 end
 
 print pyramid_sum([1, 4, 6]) #=> [[15], [5, 10], [1, 4, 6]]
