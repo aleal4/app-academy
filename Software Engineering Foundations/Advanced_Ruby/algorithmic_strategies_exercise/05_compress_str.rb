@@ -8,7 +8,7 @@ def compress_str(str)
   i = 0
   while i < str.length
     char = str[i]
-
+    
     count = 0
     while char == str[i]
       count += 1
@@ -16,13 +16,11 @@ def compress_str(str)
     end
 
     if count > 1
-      compressed += (count.to_s + char)
-    else
-      compressed += char
+        compressed += (count.to_s + char)
+      else
+        compressed += char
     end
-
   end
-
   compressed
 end
 
