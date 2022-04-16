@@ -31,10 +31,10 @@ end
 def dupe_indices(array)
   indices = Hash.new { |hash, key| hash[key] = [] }
   array.each_with_index do |ele, i|
-    indices[ele] << i
+    indices[ele] << i 
   end
 
-  indices.select { |key, value| value.length > 1}
+  indices.select { |key, arr| arr.length > 1}
 end
 
 def ele_count(arr)
