@@ -13,7 +13,7 @@
 # end
 
 def coprime?(num1, num2)    
-  (2..num1).none? { |num| num1 % num === 0 && num2 % num === 0 }
+  (2..num1).none? { |divisor| num1 % divisor === 0 && num2 % divisor = 0 }
 end
 
 
