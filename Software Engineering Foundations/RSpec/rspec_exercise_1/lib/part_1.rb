@@ -3,8 +3,8 @@ def average(num1, num2)
   return average
 end
 
-def average_array(array)
-  array.sum / (array.length * 1.0)
+def average_array(num)
+  num.sum / (num.length * 1.0)
 end
 
 def repeat(str, num)
