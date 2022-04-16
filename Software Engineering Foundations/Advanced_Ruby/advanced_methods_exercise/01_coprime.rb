@@ -13,11 +13,18 @@
 # end
 
 def coprime?(num1, num2)    
-  (2..num1).none? { |divisor| num1 % divisor == 0 && num2 % divisor == 0 }     
-  
-
+  (2..num1).none? { |num| num1 % num === 0 && num2 % num === 0 }
 end
 
+
+# def coprime?(num1, num2)
+#   (2..num1).each do |divisor|
+#     if num1 % divisor == 0 && num2 % divisor == 0
+#       return false
+#     end
+#   end
+#   true
+# end
 
 p coprime?(25, 12)    # => true
 p coprime?(7, 11)     # => true

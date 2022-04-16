@@ -4,7 +4,6 @@
 
 def adult_in_group?(people)
   people.any? {|person| person[:age] >= 18}
-
 end
 
 people_1 = [
@@ -22,3 +21,4 @@ people_2 = [
     {name: "Bill", age: 16}
 ]
 p adult_in_group?(people_2)    # => false
+
