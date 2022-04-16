@@ -18,4 +18,5 @@ def fuzz_buzz(num)
 end
 
 # DeMorgan's Law
-# ! (A || B) == !A && !B 
+# !(A || B) == !A && !B 
+# !(A && B) == !A || !B 
