@@ -2,21 +2,21 @@ def partition(array, number)
   less = []
   greater = []
 
-  array.each do |ele|
+  array.each do |ele| 
     if ele < number
       less << ele
-    else
+    else 
       greater << ele
     end
   end
 
-  [less, greater]
+    [less, greater]
 end
 
 def merge(hash1, hash2)
   new_hash = {}
-  hash1.each { |key, value| new_hash[key] = value }
-  hash2.each { |key, value| new_hash[key] = value }
+  hash1.each {|key, value| new_hash[key] = value }
+  hash2.each {|key, value| new_hash[key] = value }
   new_hash
 end
 
