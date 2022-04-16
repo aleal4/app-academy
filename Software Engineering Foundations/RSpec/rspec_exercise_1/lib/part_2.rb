@@ -26,13 +26,15 @@ def vowel_counts(string)
 end
 
 def caesar_cipher(message, n)
+  # turning into alphabet with .to_a
   alphabet = ('a'..'z').to_a
   new_message = ''
+  
 
   message.each_char do |char|
     if alphabet.include?(char)
-      old_index = alphabet.index(char)
-      new_index = old_index + n
+      old_indx = alphabet.index(char)
+      new_index = old_indx + n
       new_message += alphabet[new_index % 26]
     else
       new_message += char
