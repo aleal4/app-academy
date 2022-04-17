@@ -30,3 +30,14 @@ def my_count(array, &prc)
   end
     count
 end
+
+def my_any?(array, &prc)
+
+  array.each do |ele|
+    if prc.call(ele)
+      return true
+    end
+  end
+
+  false
+end
