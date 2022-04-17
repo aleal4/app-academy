@@ -21,8 +21,8 @@ class Dog
   end
 
   #setter
-  def age=(number)
-    @age = number
+  def age=(new_age)
+    @age = new_age
   end
 
 
