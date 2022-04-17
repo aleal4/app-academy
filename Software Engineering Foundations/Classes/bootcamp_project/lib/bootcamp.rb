@@ -45,8 +45,20 @@ class Bootcamp
     @students.length / @teachers.length
   end
 
-  # def add_grade(student, grade)
-  #   @grades << 
+  def add_grade(student, grade)
+    if @students.include?(student)
+      @grades[student] << grade
+      return true
+    end
+    false
+  end
 
-  # end
+  def num_grades(student)
+    @grades[student].length
+  end
+
+  def average_grade(student)
+    if @students.include(student) && @grades[student].length > 0
+      @grades[student].sum / @grades[student].length
+    end
 end
