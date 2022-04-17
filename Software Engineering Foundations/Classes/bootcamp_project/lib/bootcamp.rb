@@ -3,9 +3,9 @@ class Bootcamp
     @name = name
     @slogan = slogan
     @student_capacity = student_capacity
-    @teachers = Array.new
-    @students = Array.new
-    @grades = Hash.new { |h,k| h[k] = []}
+    @teachers = []
+    @students = []
+    @grades = Hash.new { |hash,key| hash[key] = []}
   end
 
   def name
@@ -24,12 +24,12 @@ class Bootcamp
     @students
   end
 
-  def hire=(new_hire)
-    @teachers = @teachers << new_hire
+  def hire(new_hire)
+    @teachers << new_hire
   end
 
-  def enroll=(student)
-    if students.length < student_capacity
+  def enroll(student)
+    if students.length < @student_capacity
       students << student
       return true
     else
