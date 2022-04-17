@@ -36,5 +36,21 @@ def and_selector(array, prc_1, prc_2)
   end
 
   result
-
 end
+
+def alternating_mapper(array, prc_1, prc_2)
+  result = []
+
+  array.each_with_index do |ele, idx|
+    if idx.even?
+      result << prc_1.call(ele)
+    else
+      result << prc_2.call(ele)
+    end
+  end
+
+  result
+end
+
+
+
