@@ -53,6 +53,12 @@ class Array
   end
 
   def my_uniq 
-    
+    hash = {}
+    self.each {|ele| hash[ele] = true}
+    hash.keys
+  end
+
+  def my_transpose
+
   end
 end
