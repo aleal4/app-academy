@@ -25,3 +25,16 @@ def greater_proc_value(num, prc_1, prc_2)
     return num_2
   end
 end
+
+def and_selector(array, prc_1, prc_2)
+  result = []
+
+  array.select do |ele|
+    if prc_1.call(ele) && prc_2.call(ele)
+      result << ele
+    end
+  end
+
+  result
+
+end
