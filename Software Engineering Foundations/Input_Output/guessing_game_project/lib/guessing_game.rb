@@ -17,16 +17,18 @@ class GuessingGame
     @num_attempts += 1
     if value == @secret_num
       @game_over = true
-      p 'you win'
+      puts 'you win'
     elsif value > @secret_num
-      p 'too big'
+      puts 'too big'
     else 
-      p 'too small'
+      puts 'too small'
     end
   end
 
   def ask_user
-    
+    puts 'enter a number'
+    guess = gets.chomp.to_i
+    check_num(guess)
   end
 
 
