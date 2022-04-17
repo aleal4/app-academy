@@ -39,14 +39,7 @@ class Dog
   end
 
   def favorite_food?(food)
-    
-
-    if @favorite_foods.downcase.include?(food.downcase)
-      return true
-    end
-
-    false
+    @favorite_foods.map(&:downcase).include?(food.downcase)
   end
-
 end
 
