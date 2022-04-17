@@ -59,6 +59,18 @@ class Array
   end
 
   def my_transpose
-    
+    new_arr = []
+
+    (0...self.length).each do |row|
+      new_arr = []
+
+      (0...self.length) each do |col|
+        new_row << self[row][col]
+      end
+
+      new_arr << new_row
+    end
+
+    new_arr
   end
 end
