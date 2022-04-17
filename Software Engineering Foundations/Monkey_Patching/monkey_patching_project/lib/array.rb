@@ -8,20 +8,27 @@ class Array
   end
 
   def average
-    return nil if array.empty?
-
-    return (self.sum / (self.length * 1.0))
+      return nil if self.empty?
+      return (self.sum / (self.length * 1.0))
   end
 
-  # def median
-  #   return nil if array.empty?
+  def median
+      return nil if self.empty?
 
-  #   sorted = array.sort
-  #   len = sorted.length
-  #   (sorted[])
-  # end
-
-  def counts 
-    
+      if self.length.odd?
+        mid_index = self.length / 2 
+        return self.sort[mid_index]
+      else
+        mid_index = self.length / 2 
+        first_ele = self.sort[mid_index]
+        second_ele = self.sort[mid_index - 1]
+        return (first_ele + second_ele)/2.0
+      end
+    end
+  
+  def counts
+    count = Hash.new(0)
+    self.each {|ele| count[ele] += 1}
+    count
   end
 end
