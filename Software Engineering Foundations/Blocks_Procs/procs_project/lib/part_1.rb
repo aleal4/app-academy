@@ -41,3 +41,14 @@ def my_any?(array, &prc)
 
   false
 end
+
+def my_all?(array, &prc)
+
+  array.each do |ele|
+    if prc.call(ele) == false
+      return false
+    end
+  end
+
+  true
+end
