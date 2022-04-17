@@ -15,18 +15,38 @@ class Dog
     @breed
   end
 
+  #getter
+  def age
+    @age 
+  end
+
+  #setter
   def age=(number)
     @age = number
   end
 
+
   def bark 
     if @age > 3
-      @bark = @name.upcase
-    elsif @age <= 3
-      @bark = @name.downcase
+      @bark.upcase
+    else @age <= 3
+      @bark.downcase
     end
   end
 
+  def favorite_foods
+    @favorite_foods 
+  end
+
+  def favorite_food?(food)
+    
+
+    if @favorite_foods.downcase.include?(food.downcase)
+      return true
+    end
+
+    false
+  end
 
 end
 
