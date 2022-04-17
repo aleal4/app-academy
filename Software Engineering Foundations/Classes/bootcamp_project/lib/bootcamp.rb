@@ -40,4 +40,13 @@ class Bootcamp
   def enrolled?(student)
     @students.include?(student)
   end
+
+  def student_to_teacher_ratio
+    @students.length / @teachers.length
+  end
+
+  # def add_grade(student, grade)
+  #   @grades << 
+
+  # end
 end
