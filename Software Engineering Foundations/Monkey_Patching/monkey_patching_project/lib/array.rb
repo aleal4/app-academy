@@ -31,4 +31,28 @@ class Array
     self.each {|ele| count[ele] += 1}
     count
   end
+
+  def my_count(input)
+    count = 0
+    self.each do |ele|
+      if ele == input
+        count += 1
+      end
+    end
+    count
+  end
+
+  def my_index(target)
+    self.each_with_index do |ele, idx| 
+      if ele == target
+        return idx 
+      end
+    end
+
+    nil
+  end
+
+  def my_uniq 
+    
+  end
 end
