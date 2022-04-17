@@ -46,7 +46,7 @@ class Bootcamp
   end
 
   def add_grade(student, grade)
-    if @students.include?(student)
+    if self.enrolled?(student)
       @grades[student] << grade
       return true
     end
@@ -58,7 +58,8 @@ class Bootcamp
   end
 
   def average_grade(student)
-    if @students.include(student) && @grades[student].length > 0
+    if self.enrolled?(student) && @grades[student].length > 0
       @grades[student].sum / @grades[student].length
     end
+  end
 end
