@@ -3,5 +3,8 @@ class Bootcamp
     @name = name
     @slogan = slogan
     @student_capacity = student_capacity
+    @teachers = Array.new
+    @students = Array.new
+    @grades = Hash.new { |h,k| h[k] = []}
   end
 end
