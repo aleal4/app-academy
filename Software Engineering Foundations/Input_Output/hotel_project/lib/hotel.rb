@@ -2,16 +2,16 @@ require_relative "room"
 
 class Hotel
 
-  def initialize(name, hash)
+  def initialize(name, capacities)
     @name = name
     @rooms = {}
-    hash = hash.each do |room_name, capacity|
+
+    capacities.each do |room_name, capacity|
       @rooms[room_name] = Room.new(capacity)
     end
   end
 
-
-
-  
-
+  def name
+    @name.split(' ').map(&:capitalize).join(" ")
+  end
 end
