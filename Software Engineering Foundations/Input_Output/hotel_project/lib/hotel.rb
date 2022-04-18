@@ -29,7 +29,7 @@ class Hotel
       return
     end
 
-    success = @room[room_name].add_occupant(person)
+    success = @rooms[room_name].add_occupant(person)
     if success 
       puts 'check in successful'
     else
