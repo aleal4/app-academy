@@ -42,4 +42,26 @@ class Hangman
     indices.each {|index| @guess_word[index] = char}
   end
 
+  def try_guess(char)
+    if self.already_attempted?(char) 
+      puts 'that has already been attempted'
+      return false
+    end
+
+    @attempted_chars << char
+
+    matching_indices = self.get_matching_indices(char)
+    if matching_indices.empty?
+      @remaining_incorrect_guesses -= 1
+    else
+      self.fill_indices(char, matching_indices)
+    end
+
+    true
+  end
+ 
+  def ask_user_for_guess
+    
+  end
+
 end
