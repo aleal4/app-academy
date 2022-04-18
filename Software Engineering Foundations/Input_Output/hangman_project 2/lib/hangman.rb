@@ -61,7 +61,18 @@ class Hangman
   end
  
   def ask_user_for_guess
-    
+    puts 'Enter a char:'
+    user_guess = gets.chomp 
+    self.try_guess(user_guess)
+  end
+
+  def win?
+    if @secret_word == @guess_word.join('')
+      print 'WIN'
+      return true
+    else
+      return false
+    end
   end
 
 end
