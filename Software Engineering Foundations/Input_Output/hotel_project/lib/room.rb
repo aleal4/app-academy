@@ -3,4 +3,16 @@ class Room
     @capacity = capacity
     @occupants = []
   end
+
+  def capacity
+    @capacity
+  end
+
+  def occupants
+    @occupants
+  end
+
+  def full?
+    @occupants.length == @capacity
+  end
 end
