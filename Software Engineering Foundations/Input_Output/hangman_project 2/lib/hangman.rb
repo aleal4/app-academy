@@ -29,11 +29,18 @@ class Hangman
     false
   end
 
-  def get_matching_indices(char)
-    
-
+  def get_matching_indices(guess)
+    new_arr = []
+    @secret_word.each_char.with_index do |char, i|
+      if char == guess
+        new_arr << i
+      end
+    end
+    new_arr
   end
 
-
+  def fill_indices(char, indices)
+    indices.each {|index| @guess_word[index] = char}
+  end
 
 end
