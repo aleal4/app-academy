@@ -30,8 +30,8 @@ class Hangman
 
   def get_matching_indices(guess)
     new_arr = []
-    @secret_word.each_char.with_index do |char, i|
-      if char == guess
+    @secret_word.each_char.with_index do |secret_char, i|
+      if secret_char == guess
         new_arr << i
       end
     end
