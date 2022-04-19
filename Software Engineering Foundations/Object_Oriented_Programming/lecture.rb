@@ -1,4 +1,4 @@
-class dog
+class Dog
   def initialize(name, age, favorite_food)
     @name = name
     @age = age
@@ -22,5 +22,5 @@ class dog
   end
 end
 
-my_dog = Dog.new('Fido', 2, "pizza")
+my_dog = Dog.new("Fido", 2, "pizza")
 p my_dog.name
