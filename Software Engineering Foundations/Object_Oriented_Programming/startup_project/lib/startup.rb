@@ -11,8 +11,18 @@ class Startup
   end
 
   def valid_title?(title)
-    
+    if salaries.key?(title)
+      return true
+    else
+      return false
+    end
+  end
 
+  def >(another_startup)
+    funding > another_startup.funding
   end
   
+  def hire(employee_name, title)
+
+  end
 end
