@@ -63,4 +63,13 @@ class Startup
     @employees = []
     @funding = 0
   end
+
+  def acquire(another_startup)
+    @funding += another_startup.funding
+
+    
+
+    @employees = @employees + another_startup.employees
+    another_startup.close()
+  end
 end
