@@ -33,4 +33,14 @@ class Startup
   def size 
     @employees.length
   end
+
+  def pay_employee(employee)
+    
+  end
+
+  def payday
+    @employees.each do |employee| 
+      self.pay_employee(employee)
+    end
+  end
 end
