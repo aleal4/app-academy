@@ -35,7 +35,13 @@ class Startup
   end
 
   def pay_employee(employee)
-    
+    money_to_pay = @salaries[employee.title]
+    if @funding >= money_to_pay
+      employee.pay(money_to_pay)
+      @funding -= money_to_pay
+    else
+      raise 'cannot pay'
+    end
   end
 
   def payday
