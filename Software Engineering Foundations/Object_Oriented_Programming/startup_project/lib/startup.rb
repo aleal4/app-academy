@@ -1,10 +1,18 @@
 require "employee"
 
 class Startup
-  attr_reader :employees
-  attr_accessor :name, :funding, :salaries
+  attr_accessor :name, :funding, :salaries, :employees
 
   def initialize(name, funding, salaries)
+    @name = name
+    @funding = funding
+    @salaries = salaries
     @employees = []
   end
+
+  def valid_title?(title)
+    
+
+  end
+  
 end
