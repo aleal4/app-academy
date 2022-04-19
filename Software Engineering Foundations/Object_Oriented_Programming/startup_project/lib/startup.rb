@@ -23,6 +23,14 @@ class Startup
   end
   
   def hire(employee_name, title)
+    if salaries.key?(title)
+      @employees << Employee.new(employee_name, title)
+    else
+      return error
+    end
+  end
 
+  def size 
+    @employees.length
   end
 end
