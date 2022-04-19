@@ -50,4 +50,13 @@ class Startup
       self.pay_employee(employee)
     end
   end
+
+  def average_salary
+    sum = 0
+    @employees.each do |employee|
+      sum += @salaries[employee.title]
+    end
+    sum / @employees.length
+  end
+  
 end
