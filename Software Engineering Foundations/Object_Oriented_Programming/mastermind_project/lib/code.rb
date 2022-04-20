@@ -37,4 +37,14 @@ class Code
   def length
     @pegs.length
   end
+
+  def num_exact_matches(guesses)
+    matches = 0
+    guesses.each_with_index do |char, ind|
+      if char[i] == @pegs[ind]
+        matches += 1
+      end
+    end
+    matches
+  end
 end
