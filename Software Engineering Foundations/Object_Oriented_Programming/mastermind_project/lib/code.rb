@@ -9,4 +9,13 @@ class Code
   def self.valid_pegs?(chars)
     chars.all? { |chars| POSSIBLE_PEGS.has_key?(chars.upcase)}
   end
+
+  def initialize(chars)
+    if Code.valid_pegs?(chars)
+      @pegs = chars 
+    else
+      raise 'error!'
+    end
+
+  end
 end
