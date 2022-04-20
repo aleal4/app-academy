@@ -10,6 +10,8 @@ class Code
     chars.all? { |chars| POSSIBLE_PEGS.has_key?(chars.upcase)}
   end
 
+  attr_reader :pegs 
+  
   def initialize(chars)
     if Code.valid_pegs?(chars)
       @pegs = chars.map(&:upcase) 
