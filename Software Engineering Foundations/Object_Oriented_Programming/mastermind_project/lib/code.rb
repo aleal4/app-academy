@@ -18,6 +18,9 @@ class Code
     Code.new(random_pegs)
   end
 
+  def self.from_string(pegs)
+    Code.new(pegs.split(''))
+  end
 
   def initialize(chars)
     if Code.valid_pegs?(chars)
