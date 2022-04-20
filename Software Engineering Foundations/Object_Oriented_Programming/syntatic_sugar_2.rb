@@ -4,10 +4,13 @@ class Queue
     @line = []
   end
 
-  def ele_at_pos(position)
+  def [](position)
     @line[position]
   end
 
+  def []=(position, ele)
+    @line[position] = ele
+  end
 
   def add(ele)
     @line << ele
@@ -22,3 +25,7 @@ end
 checkout = Queue.new
 checkout.add('Alan')
 checkout.add('Alonzo')
+
+p checkout[0] = 'Grace'
+# p checkout.[]=(0, 'Grace')
+# p checkout[1]
