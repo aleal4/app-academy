@@ -12,7 +12,7 @@ class Code
 
   def initialize(chars)
     if Code.valid_pegs?(chars)
-      @pegs = chars 
+      @pegs = chars.map(&:upcase) 
     else
       raise 'error!'
     end
