@@ -49,9 +49,14 @@ class Code
   end
 
   def num_near_matches(guess_code)
-    color_coount = 0
+    count = 0
     
+    (0...guess_code.length).each do |i|
+      if guess_code[i] != self[i] && self.pegs.include?(guess_code[i])
+        count += 1
+      end
+    end
 
-    color_coount 
+    count
   end
 end
