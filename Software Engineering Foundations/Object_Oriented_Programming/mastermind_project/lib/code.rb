@@ -47,4 +47,11 @@ class Code
     end
     matches
   end
+
+  def num_near_matches(guess_code)
+    color_coount = 0
+    
+
+    color_coount 
+  end
 end
