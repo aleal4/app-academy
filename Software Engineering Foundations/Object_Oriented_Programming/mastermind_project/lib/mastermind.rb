@@ -12,6 +12,7 @@ class Mastermind
 
   def ask_user_for_guess
     puts 'Enter a code'
-    
+    guess = Code.from_string(gets.chomp)
+    self.print_matches(guess)
   end
 end
