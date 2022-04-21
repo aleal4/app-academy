@@ -50,7 +50,7 @@ class Code
 
   def num_near_matches(guess_code)
     count = 0
-    
+    # need to double check
     (0...guess_code.length).each do |i|
       if guess_code[i] != self[i] && self.pegs.include?(guess_code[i])
         count += 1
