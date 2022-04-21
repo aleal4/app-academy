@@ -59,4 +59,8 @@ class Code
 
     count
   end
+
+  def ==(another_code)
+    self.pegs == another_code
+  end
 end
