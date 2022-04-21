@@ -61,6 +61,6 @@ class Code
   end
 
   def ==(another_code)
-    self.pegs == another_code
+    self.pegs == another_code.pegs
   end
 end
