@@ -19,16 +19,6 @@ class Board
   end
 
   def num_ships
-    count = 0
-
-    @gird.each do |row|
-      row.each do |column|
-        if row[column] == :S
-          count += 1
-        end
-      end
-    end
-
-    count
+    @grid.flatten.count(:S)
   end
 end
