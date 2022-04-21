@@ -17,4 +17,18 @@ class Board
     row, col = position
     @grid[row][col] = value
   end
+
+  def num_ships
+    count = 0
+
+    @gird.each do |row|
+      row.each do |column|
+        if row[column] == :S
+          count += 1
+        end
+      end
+    end
+
+    count
+  end
 end
