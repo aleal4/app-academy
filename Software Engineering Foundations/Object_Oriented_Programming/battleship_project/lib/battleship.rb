@@ -51,5 +51,4 @@ class Battleship
     @board.print 
     puts @remaining_misses
   end
-
 end
