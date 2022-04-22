@@ -43,4 +43,18 @@ class Board
       self[pos] = :S
     end
   end
+
+  def hidden_ships_grid
+    @grid.map do |row|
+      row.map do |ele|
+        if ele == :S
+          ele = :N
+        else
+          ele
+        end
+      end
+    end
+  end
+
+  
 end
