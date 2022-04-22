@@ -45,7 +45,11 @@ class Battleship
 
   def turn
     coordinates = @player.get_move
-
+    if !@board.attack(coordinates)
+      @remaining_misses -= 1
+    end
+    @board.print 
+    puts @remaining_misses
     
   end
 
