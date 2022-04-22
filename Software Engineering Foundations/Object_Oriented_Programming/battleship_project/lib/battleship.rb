@@ -50,7 +50,6 @@ class Battleship
     end
     @board.print 
     puts @remaining_misses
-    
   end
 
 end
