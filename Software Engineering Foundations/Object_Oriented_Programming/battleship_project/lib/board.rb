@@ -21,4 +21,8 @@ class Board
   def num_ships
     @grid.flatten.count(:S)
   end
+
+  def attack(position)
+    
+  end
 end
