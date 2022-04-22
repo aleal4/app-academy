@@ -17,4 +17,36 @@ class Battleship
     @board.print
   end
 
+  def lose?
+    if @remaining_misses <= 0
+      print 'you lose'
+      return true
+    else
+      return false
+    end
+  end
+
+  def win?
+    if @board.num_ships <= 0
+      print 'you win'
+      return true
+    else
+      return false
+    end
+  end
+
+  def game_over?
+    if self.win? || self.lose?
+      return true
+    else
+      return false
+    end
+  end
+
+  def turn
+    coordinates = @player.get_move
+
+    
+  end
+
 end
