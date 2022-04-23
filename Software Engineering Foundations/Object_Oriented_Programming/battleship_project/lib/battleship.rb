@@ -49,6 +49,6 @@ class Battleship
       @remaining_misses -= 1
     end
     @board.print 
-    puts @remaining_misses
+    puts "Remaining misses: #{@remaining_misses}"
   end
 end
