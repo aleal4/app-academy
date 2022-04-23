@@ -1,6 +1,6 @@
-def say_hello
-  p 'hello'
-  say_hello
+def countdown(n)
+  p n
+  countdown(n - 1)
 end
 
-say_hello 
+countdown(10) 
