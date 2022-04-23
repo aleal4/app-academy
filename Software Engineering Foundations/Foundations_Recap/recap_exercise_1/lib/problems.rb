@@ -6,7 +6,15 @@
 #
 # all_vowel_pairs(["goat", "action", "tear", "impromptu", "tired", "europe"])   # => ["action europe", "tear impromptu"]
 def all_vowel_pairs(words)
-
+    pairs = []
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    words.each_with_index do |word_1, idx_1| 
+        words.each_with_index do |word_2, idx_2| 
+            pair = word_1 + " " + word_2
+            pairs << pair if idx_2 > idx_1 && vowels.all? { |vowel| pair.include?(vowel) }
+        end
+    end
+    pairs
 end
 
 
