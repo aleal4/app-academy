@@ -26,7 +26,12 @@ end
 # composite?(9)     # => true
 # composite?(13)    # => false
 def composite?(num)
-
+    (2...num).each do |i|
+        if num % i == 0
+            return true
+        end
+    end
+    false
 end
 
 
