@@ -73,7 +73,8 @@ end
 # reverse_string("internet")    # => "tenretni"
 # reverse_string("friends")     # => "sdneirf"
 def reverse_string(str)
-
+  return "" if str.empty?
+  reverse_string(str[1..-1]) + str[0]
 end
 
 
