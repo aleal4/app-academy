@@ -1,8 +1,8 @@
 class Board
   attr_reader :size
 
-  def self.print_grid(arr)
-    arr.each do |row| 
+  def self.print_grid(grid)
+    grid.each do |row| 
       puts row.join(" ")
     end
   end
