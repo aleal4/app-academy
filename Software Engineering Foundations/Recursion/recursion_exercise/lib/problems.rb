@@ -115,3 +115,4 @@ def flatten(data)
   data.each {|ele| flattened += flatten(ele)}
   flattened
 end
+
