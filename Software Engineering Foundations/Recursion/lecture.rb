@@ -10,7 +10,7 @@ def countdown(n)
   countdown(n - 1)
 end
 
-countdown(10) 
+# countdown(10) 
 
 #factoral
 def factorial(n)
@@ -18,4 +18,13 @@ def factorial(n)
   n * factorial(n - 1)
 end
 
-factorial(5)
+# p factorial(5)
+
+# fibanacci sequence 
+def fib(n)
+  return 1 if n == 1 || n == 2
+  fib(n - 1) + fib(n - 2)
+end
+
+p fib(7)
+
