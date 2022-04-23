@@ -12,13 +12,13 @@ end
 # compare(-4.5, -5)
 # compare(12, 12)
 
-def bubble_sort(array)
+def bubble_sort(array, &prc)
   sorted = false
   while !sorted
     sorted = true
 
     (0...array.length - 1).each do |i|
-      if array[i] > array[i + 1]
+      if prc.call(array[i] > array[i + 1]) == -1
         array[i], array[i + 1] = array[i + 1], array[i]
         sorted = false
       end
@@ -27,4 +27,4 @@ def bubble_sort(array)
   array
 end
 
-p bubble_sort([6, 10, -5, 9, 0 , 8, 3, 2])
+p bubble_sort([6, 10, -5, 9, 0 , 8, 3, 2]) { |a, b| a <=> b }
