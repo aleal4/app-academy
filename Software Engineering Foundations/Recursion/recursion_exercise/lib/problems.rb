@@ -53,6 +53,8 @@ end
 # sum_array([5])            # => 5
 # sum_array([5, 2])         # => 7
 # sum_array([4, 10, -1, 2]) # => 15
+
+#testing
 def sum_array(array)
   return 0 if array.empty?
   first = array[0]
