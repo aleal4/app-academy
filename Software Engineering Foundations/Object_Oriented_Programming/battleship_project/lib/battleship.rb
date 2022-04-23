@@ -43,7 +43,7 @@ class Battleship
     end
   end
 
-  def turn
+  def turn 
     coordinates = @player.get_move
     if !@board.attack(coordinates)
       @remaining_misses -= 1
@@ -52,3 +52,4 @@ class Battleship
     puts "Remaining misses: #{@remaining_misses}"
   end
 end
+
