@@ -111,12 +111,12 @@ def vowel_rotate(str)
   new_str = str[0..-1]
   vowels = 'aeiou'
   # get the indicies of the vowels
-  vowel_incidces = (0...str.length).select { |i| vowels.include?(str[i]) }
+  vowel_indices = (0...str.length).select { |i| vowels.include?(str[i]) }
   # rotate the vowels into a new array
-  rotated_vowel_indicies = vowel_incidces.rotate(-1)
+  rotated_vowel_indicies = vowel_indices.rotate(-1)
 
   # vowel_idx refers to the position of vowel within original string. i refers to actual index within the vowel indicies
-  vowel_incidces.each_with_index do |vowel_idx, i|
+  vowel_indices.each_with_index do |vowel_idx, i|
     # grab new vowel based on rotated_vowel-idicies location
     new_vowel = str[rotated_vowel_indicies[i]]
     new_str[vowel_idx] = new_vowel
