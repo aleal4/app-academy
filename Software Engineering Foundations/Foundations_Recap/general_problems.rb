@@ -77,9 +77,10 @@ def prime_factors(num)
   (2...num).select {|i| num % i == 0 && prime?(i)}
 end
 
-p bi_prime?(14)   # => true
-p bi_prime?(22)   # => true
-p bi_prime?(25)   # => true
-p bi_prime?(94)   # => true
-p bi_prime?(24)   # => false
-p bi_prime?(64)   # => false
+# p bi_prime?(14)   # => true
+# p bi_prime?(22)   # => true
+# p bi_prime?(25)   # => true
+# p bi_prime?(94)   # => true
+# p bi_prime?(24)   # => false
+# p bi_prime?(64)   # => false
+
