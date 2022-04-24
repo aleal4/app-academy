@@ -56,6 +56,23 @@ class Array
     flattened
   end
 
+  def my_zip(*arrays)
+    zipped = []
+
+    self.length.times do |i|
+      sub_zip = [self[i]]
+
+      arrays.each do |array|
+        sub_zip << array[i]
+      end
+
+      zipped << sub_zip
+    end
+
+    zipped  
+  end
+
+  end
 
 
 end
@@ -89,4 +106,4 @@ end
 # p a.my_all? { |num| num > 1 } # => false
 # p a.my_all? { |num| num < 4 } # => true
 
-p [1, 2, 3, [4, [5, 6]], [[[7]], 8]].my_flatten # => [1, 2, 3, 4, 5, 6, 7, 8]
+# p [1, 2, 3, [4, [5, 6]], [[[7]], 8]].my_flatten # => [1, 2, 3, 4, 5, 6, 7, 8]
