@@ -118,8 +118,7 @@ def vowel_rotate(str)
   # vowel_idx refers to the position of vowel within original string. i refers to actual index within the vowel indicies
   vowel_indices.each_with_index do |vowel_idx, i|
     # grab new vowel based on rotated_vowel-idicies location
-    new_vowel = str[rotated_vowel_indicies[i]]
-    new_str[vowel_idx] = new_vowel
+    new_str[vowel_idx] = str[rotated_vowel_indicies[i]]
 
   end
 
