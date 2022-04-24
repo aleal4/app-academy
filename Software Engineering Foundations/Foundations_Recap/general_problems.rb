@@ -107,10 +107,19 @@ end
 
 
 def vowel_rotate(str)
+  new_str = str[0..-1]
   vowels = 'aeiou'
   vowel_incidces = (0...str.length).select { |i| vowels.include?(str[i]) }
-  p vowel_incidces
+  new_vowel_indicies = vowel_incidces.rotate(-1)
 
+  vowel_incidces.each_with_index do |vowel_idx, i|
+    new_vowel = str[new_vowel_indicies[i]]
+
+    new_str[vowel_idx] = new_vowel
+
+  end
+
+  new_str
 end
 
 p vowel_rotate('computer')      # => "cempotur"
