@@ -99,9 +99,22 @@ def vigenere_cipher(message, keys)
   new_message
 end
 
-p vigenere_cipher("toerrishuman", [1])        # => "upfssjtivnbo"
-p vigenere_cipher("toerrishuman", [1, 2])     # => "uqftsktjvobp"
-p vigenere_cipher("toerrishuman", [1, 2, 3])  # => "uqhstltjxncq"
-p vigenere_cipher("zebra", [3, 0])            # => "ceerd"
-p vigenere_cipher("yawn", [5, 1])     
+# p vigenere_cipher("toerrishuman", [1])        # => "upfssjtivnbo"
+# p vigenere_cipher("toerrishuman", [1, 2])     # => "uqftsktjvobp"
+# p vigenere_cipher("toerrishuman", [1, 2, 3])  # => "uqhstltjxncq"
+# p vigenere_cipher("zebra", [3, 0])            # => "ceerd"
+# p vigenere_cipher("yawn", [5, 1])     
 
+
+def vowel_rotate(str)
+  vowels = 'aeiou'
+  vowel_incidces = (0...str.length).select { |i| vowels.include?(str[i]) }
+  p vowel_incidces
+
+end
+
+p vowel_rotate('computer')      # => "cempotur"
+p vowel_rotate('oranges')       # => "erongas"
+p vowel_rotate('headphones')    # => "heedphanos"
+p vowel_rotate('bootcamp')      # => "baotcomp"
+p vowel_rotate('awesome')   
