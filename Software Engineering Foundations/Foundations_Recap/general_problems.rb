@@ -133,6 +133,7 @@ end
 
 class String 
   def select(&prc)
+    return '' if prc.nil?
     new_str = ''
     self.each_char do |char|
       if prc.call(char)
