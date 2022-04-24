@@ -206,12 +206,21 @@ def lucas_sequence(length)
   seq = lucas_sequence(length - 1) 
   next_el = seq[-1] + seq[-2]
   seq << next_el
-  seq
 end
 
-p lucas_sequence(0)   # => []
-p lucas_sequence(1)   # => [2]    
-p lucas_sequence(2)   # => [2, 1]
-p lucas_sequence(3)   # => [2, 1, 3]
-p lucas_sequence(6)   # => [2, 1, 3, 4, 7, 11]
-p lucas_sequence(8)
+# p lucas_sequence(0)   # => []
+# p lucas_sequence(1)   # => [2]    
+# p lucas_sequence(2)   # => [2, 1]
+# p lucas_sequence(3)   # => [2, 1, 3]
+# p lucas_sequence(6)   # => [2, 1, 3, 4, 7, 11]
+# p lucas_sequence(8)
+
+def prime_factorization(num)
+
+  (2..num).each do |factor|
+    if num % factor == 0
+      other_factor = num / factor
+      prime_factorization(factor)
+    end
+  end
+end
