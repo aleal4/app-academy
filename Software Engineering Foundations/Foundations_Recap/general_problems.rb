@@ -53,8 +53,33 @@ def longest_streak(str)
 
 end
 
-p longest_streak('a')           # => 'a'
-p longest_streak('abc')         # => 'c'
-p longest_streak('accccbbb')    # => 'cccc'
-p longest_streak('aaaxyyyyyzz') # => 'yyyyy
-p longest_streak('aaabbb')      # => 'bbb'
+# p longest_streak('a')           # => 'a'
+# p longest_streak('abc')         # => 'c'
+# p longest_streak('accccbbb')    # => 'cccc'
+# p longest_streak('aaaxyyyyyzz') # => 'yyyyy
+# p longest_streak('aaabbb')      # => 'bbb'
+
+def bi_prime?(num)
+  prime_facts = prime_factors(num)
+
+  prime_facts.any? do |a|
+    b = num / a * 1.0
+    prime_facts.include?(b)
+  end
+end
+
+def prime?(num)
+  return false if num < 2
+  (2...num).none? {|i| num % i == 0}
+end
+
+def prime_factors(num)
+  (2...num).select {|i| num % i == 0 && prime?(i)}
+end
+
+p bi_prime?(14)   # => true
+p bi_prime?(22)   # => true
+p bi_prime?(25)   # => true
+p bi_prime?(94)   # => true
+p bi_prime?(24)   # => false
+p bi_prime?(64)   # => false
