@@ -18,6 +18,16 @@ class Array
 
     selected
   end
+
+  def my_reject(&prc)
+    selected = []
+
+    self.my_each do |ele|
+      selected << ele unless prc.call(ele)
+    end
+
+    selected
+  end
 end
 
 
@@ -35,6 +45,10 @@ end
 #   puts num
 # end
 
+# a = [1, 2, 3]
+# p a.my_select { |num| num > 1 } # => [2, 3]
+# p a.my_select { |num| num == 4 } # => []
+
 a = [1, 2, 3]
-p a.my_select { |num| num > 1 } # => [2, 3]
-p a.my_select { |num| num == 4 } # => []
+p a.my_reject { |num| num > 1 } # => [1]
+p a.my_reject { |num| num == 4 } # => [1, 2, 3]
