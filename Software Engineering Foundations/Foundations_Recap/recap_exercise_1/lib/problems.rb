@@ -109,7 +109,15 @@ class String
     # "bootcamp".caesar_cipher(2) #=> "dqqvecor"
     # "zebra".caesar_cipher(4)    #=> "difve"
     def caesar_cipher(num)
-        
+        new_str = ""
+        alpha = ('a'..'z').to_a
+
+        self.each_char do |char|
+            start_pos = alpha.index(char)
+            new_pos = start_pos + num 
+            new_str += alpha[new_pos % 26]
+        end
+        new_str
 
     end
 
