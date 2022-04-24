@@ -125,8 +125,26 @@ def vowel_rotate(str)
   new_str
 end
 
-p vowel_rotate('computer')      # => "cempotur"
-p vowel_rotate('oranges')       # => "erongas"
-p vowel_rotate('headphones')    # => "heedphanos"
-p vowel_rotate('bootcamp')      # => "baotcomp"
-p vowel_rotate('awesome')   
+# p vowel_rotate('computer')      # => "cempotur"
+# p vowel_rotate('oranges')       # => "erongas"
+# p vowel_rotate('headphones')    # => "heedphanos"
+# p vowel_rotate('bootcamp')      # => "baotcomp"
+# p vowel_rotate('awesome')   
+
+class String 
+  def select(&prc)
+    new_str = ''
+    self.each_char do |char|
+      if prc.call(char)
+        new_str += char
+      end
+    end
+
+    new_str
+  end
+
+end
+
+p "app academy".select { |ch| !"aeiou".include?(ch) }   # => "pp cdmy"
+p "HELLOworld".select { |ch| ch == ch.upcase }          # => "HELLO"
+p "HELLOworld".select          # => ""
