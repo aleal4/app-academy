@@ -18,6 +18,7 @@ def all_vowel_pairs(words)
 end
 
 
+
 # Write a method, composite?, that takes in a number and returns a boolean indicating if the number
 # has factors besides 1 and itself
 #
@@ -101,3 +102,4 @@ class String
     end
 
 end
+
