@@ -74,13 +74,34 @@ def prime?(num)
 end
 
 def prime_factors(num)
-  (2...num).select {|i| num % i == 0 && prime?(i)}
+  (2..num).select {|i| num % i == 0 && prime?(i)}
 end
 
+
+# p bi_prime?(94)   # => true
 # p bi_prime?(14)   # => true
 # p bi_prime?(22)   # => true
 # p bi_prime?(25)   # => true
-# p bi_prime?(94)   # => true
 # p bi_prime?(24)   # => false
 # p bi_prime?(64)   # => false
+
+def vigenere_cipher(message, keys)
+  alpha = ('a'..'z').to_a
+  new_message = ''
+
+  message.each_char.with_index do |char, idx|
+    pos = alpha.index(char)
+    key = keys[idx % keys.length]
+    new_pos = (pos + key) % alpha.length
+    new_message += alpha[new_pos]
+  end
+
+  new_message
+end
+
+p vigenere_cipher("toerrishuman", [1])        # => "upfssjtivnbo"
+p vigenere_cipher("toerrishuman", [1, 2])     # => "uqftsktjvobp"
+p vigenere_cipher("toerrishuman", [1, 2, 3])  # => "uqhstltjxncq"
+p vigenere_cipher("zebra", [3, 0])            # => "ceerd"
+p vigenere_cipher("yawn", [5, 1])     
 
