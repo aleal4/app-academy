@@ -1,7 +1,9 @@
 # Write a method, least_common_multiple, that takes in two numbers and returns the smallest number that is a mutiple
 # of both of the given numbers
 def least_common_multiple(num_1, num_2)
-
+    (1..num_1 * num_2).each do |i|
+        return i if i % num_1 == 0 && i % num_2 == 0
+    end
 end
 
 
@@ -26,7 +28,7 @@ class Array
 
     end
 
-    # Write a method, Array#bubble_sort, that takes in an optional proc argument.
+    # Write a method, Array#bubble_ort, that takes in an optional proc argument.
     # When given a proc, the method should sort the array according to the proc.
     # When no proc is given, the method should sort the array in increasing order.
     #
