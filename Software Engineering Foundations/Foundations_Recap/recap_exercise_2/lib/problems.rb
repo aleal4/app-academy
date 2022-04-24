@@ -26,7 +26,11 @@ most_frequent_bigram("thethrillofit")
 class Hash
     # Write a method, Hash#inverse, that returns a new hash where the key-value pairs are swapped
     def inverse
-
+        new_hash = {}
+        self.each do |k, v|
+            new_hash[v] = k
+        end
+        new_hash
     end
 end
 
