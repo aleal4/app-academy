@@ -107,14 +107,17 @@ end
 
 
 def vowel_rotate(str)
+  # create a copy of the string via reference
   new_str = str[0..-1]
   vowels = 'aeiou'
+  # get the indicies of the vowels
   vowel_incidces = (0...str.length).select { |i| vowels.include?(str[i]) }
+  # rotate the vowels into a new array
   new_vowel_indicies = vowel_incidces.rotate(-1)
 
+  # vowel_idx refers to the position of vowel within original string. i refers to actual index within the vowel indicies
   vowel_incidces.each_with_index do |vowel_idx, i|
     new_vowel = str[new_vowel_indicies[i]]
-
     new_str[vowel_idx] = new_vowel
 
   end
