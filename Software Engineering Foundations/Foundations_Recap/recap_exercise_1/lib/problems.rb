@@ -118,8 +118,6 @@ class String
             new_str += alpha[new_pos % 26]
         end
         new_str
-
     end
-
 end
 
