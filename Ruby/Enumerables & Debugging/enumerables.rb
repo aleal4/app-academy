@@ -102,8 +102,14 @@ class Array
     join
   end
 
-  
+  def my_reverse
+    reversed = []
 
+    self.my_each do |ele|
+      reversed.unshift(ele)
+    end
+    reversed
+  end
 end
 
 
@@ -150,6 +156,9 @@ end
 # p a.my_rotate(-3)     #=> ["b", "c", "d", "a"]
 # p a.my_rotate(15)     #=> ["d", "a", "b", "c"] \
 
-a = [ "a", "b", "c", "d" ]
-p a.my_join         # => "abcd"
-p a.my_join("$")    # => "a$b$c$d"
+# a = [ "a", "b", "c", "d" ]
+# p a.my_join         # => "abcd"
+# p a.my_join("$")    # => "a$b$c$d"
+
+p [ "a", "b", "c" ].my_reverse   #=> ["c", "b", "a"]
+p [ 1 ].my_reverse      
