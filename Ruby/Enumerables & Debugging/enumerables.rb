@@ -73,6 +73,25 @@ class Array
     zipped  
   end
 
+  def my_rotate(position = 1)
+    
+    # split_idx = position % self.length
+
+    rotated = self.dup
+
+    if num < 0
+      num.abs.times do 
+        rotated.unshift(rotated.pop)
+      end
+    else
+      num.times do 
+        rotated.push(rotated.shift)
+      end
+    end
+
+    rotated
+  end
+
 end
 
 
@@ -108,7 +127,7 @@ end
 
 # p [1, 2, 3, [4, [5, 6]], [[[7]], 8]].my_flatten # => [1, 2, 3, 4, 5, 6, 7, 8]
 
-a = [ 4, 5, 6 ]
-b = [ 7, 8, 9 ]
-p [1, 2, 3].my_zip(a, b) # => [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+# a = [ 4, 5, 6 ]
+# b = [ 7, 8, 9 ]
+# p [1, 2, 3].my_zip(a, b) # => [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
 #    # => [[1, 4, 7, 10, 13], [2, 5, 8, 11, 14]]
