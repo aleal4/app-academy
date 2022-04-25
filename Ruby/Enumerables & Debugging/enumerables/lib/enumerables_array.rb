@@ -54,9 +54,21 @@ end
 
 class Array
   def bubble_sort!(&prc)
+    prc ||= Proc.new { |a, b| a <=> b }
+    sorted = false
+
+    while !sorted 
+      sorted = true
+      (0...self.length - 1).each do |i|
+        self[i], self[i + 1] = self[i + 1], self[i]
+        sorted = false
+      end
+    end
   end
 
   def bubble_sort(&prc)
+    duped = self.dup
+    duped.bubble_sort!
   end
 end
 
