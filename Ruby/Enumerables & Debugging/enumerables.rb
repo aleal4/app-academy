@@ -79,18 +79,30 @@ class Array
 
     rotated = self.dup
 
-    if num < 0
-      num.abs.times do 
+    if position < 0
+      position.abs.times do 
         rotated.unshift(rotated.pop)
       end
     else
-      num.times do 
+      position.times do 
         rotated.push(rotated.shift)
       end
     end
 
     rotated
   end
+
+  def my_join(separator = '')
+    join = ''
+
+    self.length.times do  |i|
+      join += self[i]
+      join += separator unless i == self.length - 1
+    end
+    join
+  end
+
+  
 
 end
 
@@ -131,3 +143,13 @@ end
 # b = [ 7, 8, 9 ]
 # p [1, 2, 3].my_zip(a, b) # => [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
 #    # => [[1, 4, 7, 10, 13], [2, 5, 8, 11, 14]]
+
+# a = [ "a", "b", "c", "d" ]
+# p a.my_rotate         #=> ["b", "c", "d", "a"]
+# p a.my_rotate(2)      #=> ["c", "d", "a", "b"]
+# p a.my_rotate(-3)     #=> ["b", "c", "d", "a"]
+# p a.my_rotate(15)     #=> ["d", "a", "b", "c"] \
+
+a = [ "a", "b", "c", "d" ]
+p a.my_join         # => "abcd"
+p a.my_join("$")    # => "a$b$c$d"
