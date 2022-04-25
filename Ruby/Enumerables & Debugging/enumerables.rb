@@ -160,5 +160,5 @@ end
 # p a.my_join         # => "abcd"
 # p a.my_join("$")    # => "a$b$c$d"
 
-p [ "a", "b", "c" ].my_reverse   #=> ["c", "b", "a"]
-p [ 1 ].my_reverse      
+# p [ "a", "b", "c" ].my_reverse   #=> ["c", "b", "a"]
+# p [ 1 ].my_reverse      
