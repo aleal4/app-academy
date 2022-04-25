@@ -8,5 +8,7 @@ class GhostGame
     @dictionary = Set.new(words)
   end
 
+  def play_round
+    @fragment = ''
 
 end
