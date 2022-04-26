@@ -21,3 +21,32 @@ def merge(hash_1, hash_2)
 
   new_hash
 end
+
+def censor(sentence, arr)
+  words = sentence.split(' ')
+
+  new_words = words.map do |word|
+    if arr.include?(word.downcase) 
+      star_vowels(word)
+    else
+      word
+    end
+  end
+
+  new_words.join(' ')
+end
+
+def star_vowels(word)
+  vowels = 'aeiou'
+  new_str = ''
+
+  word.each_char do |char|
+    if vowels.include?(char.downcase)
+      new_str += '*'
+    else
+      new_str += char
+    end
+  end
+  new_str
+end
+
