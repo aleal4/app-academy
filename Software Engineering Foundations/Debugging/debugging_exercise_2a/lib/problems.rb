@@ -28,3 +28,13 @@ def unique_chars?(string)
   end
   true
 end
+
+def dupe_indices(array)
+  indices = Hash.new {|hash,key| hash[key] = []}
+  array.each_with_index do |ele, idx|
+    indices[ele] << idx
+  end
+
+  indices.select { |key, arr| arr.length > 1 }
+
+end
