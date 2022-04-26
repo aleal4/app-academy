@@ -29,6 +29,11 @@ class Board
     end
     self[pos].value
   end
+
+  def populate
+    num_pairs = (size**2) / 2
+    cards = Card.shuffled_pairs(num_pairs)
+  end
 end
 
 
