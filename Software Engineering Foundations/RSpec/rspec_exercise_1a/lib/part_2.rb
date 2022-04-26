@@ -13,3 +13,16 @@ word
 
 end
 
+def vowel_counts(str)
+  counts = Hash.new(0)
+  vowels = 'aeiou'
+
+  str.each_char do |char|
+    if vowels.include?(char.downcase)
+      counts[char.downcase] += 1
+    end
+  end
+
+  counts
+
+end
