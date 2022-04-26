@@ -16,3 +16,15 @@ def largest_prime_factor(number)
     end
   end
 end
+
+def unique_chars?(string)
+  already_seen = []
+
+  string.each_char do |char|
+    if already_seen.include?(char)
+      return false
+    end
+    already_seen << char
+  end
+  true
+end
