@@ -1,6 +1,9 @@
 class Card
   VALUES = ('A'..'Z').to_a
 
+  attr_reader: values
+
+  
   def initialize(value, revealed = false)
     @value = value
     @revealed = revealed
