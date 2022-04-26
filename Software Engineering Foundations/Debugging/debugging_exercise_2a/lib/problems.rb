@@ -3,15 +3,15 @@
 # Feel free to use the debugger when you get stuck.
 require 'byebug'
 
-def prime(number)
+def prime?(number)
   return false if number < 2
   (2...number).none? {|i| number % i == 0}
 end
 
 def largest_prime_factor(number)
-  debugger
+  # debugger
   number.downto(2) do |factor|
-    if number % factor == 0 && prime(number)
+    if number % factor == 0 && prime?(factor)
       return factor
     end
   end
