@@ -8,6 +8,8 @@
 
 def scalar_multiple!(array, multiplier)
 
+  array.map! { |ele| ele * multiplier }
+  array
 end
 
 
