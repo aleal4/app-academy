@@ -8,6 +8,13 @@
 
 def ele_replace!(array, hash)
 
+  array.map! do |ele| 
+    if hash.has_key?(ele)
+      ele = hash[ele]
+    else
+      ele
+    end
+  end
 end
 
 
