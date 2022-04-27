@@ -23,3 +23,10 @@ def aba_translate(string)
   end
   new_word
 end
+
+def aba_array(array)
+  new_arr = array.map do |array|
+    aba_translate(array)
+  end
+  new_arr
+end
