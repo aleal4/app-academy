@@ -38,3 +38,15 @@ def dupe_indices(array)
   indices.select { |key, arr| arr.length > 1 }
 
 end
+
+def ana_array(arr_1, arr_2)
+  count_1 = ele_counter(arr_1)
+  count_2 = ele_counter(arr_2)
+  count_1 == count_2
+end
+
+def ele_counter(arr)
+  count = Hash.new(0)
+  arr.each {|ele| count[ele] += 1 }
+  count
+end
