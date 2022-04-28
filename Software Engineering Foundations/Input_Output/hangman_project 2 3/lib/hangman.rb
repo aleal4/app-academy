@@ -43,5 +43,23 @@ class Hangman
   def fill_indices(char, matching_array)
     matching_array.select{|idicies| @guess_word[idicies] = char}
   end
+
+  def try_guess(char)
+    if self.already_attempted?(char)
+      puts 'that has already been attempted'
+      return false
+    end
+
+    @attempted_chars << char
+
+    matching_indicies = self.get_matching_indices(char)
+    if matching_indicies.empty?
+      @remaining_incorrect_guesses -= 1 
+    else
+      self.fill_indices(char, matching_indicies)
+    end
+
+    true
+  end
 end
 
