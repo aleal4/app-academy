@@ -33,6 +33,10 @@ class Dog
   end
 
   def favorite_foods
-    
+    @favorite_foods
+  end
+
+  def favorite_food?(food)
+    @favorite_foods.map(&:downcase).include?(food.downcase)
   end
 end
