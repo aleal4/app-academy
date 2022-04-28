@@ -24,4 +24,10 @@ class GuessingGame
       puts 'too small'
     end
   end
+
+  def ask_user
+    puts 'Enter a number:'
+    response = gets.chomp.to_i
+    self.check_num(response)
+  end
 end
