@@ -40,4 +40,7 @@ class Hangman
     matching_indices
   end
 
+  def fill_indices(char, indicies)
+    indicies.each {|index| @guess_word[index] = char }
+  end
 end
