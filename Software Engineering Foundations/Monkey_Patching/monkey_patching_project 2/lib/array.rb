@@ -17,9 +17,17 @@ class Array
       middle = self.length / 2
       return self.sort[middle]
     else
-      
+      middle = self.length / 2
+      return (self.sort[middle] + self.sort[middle - 1]) / 2.0 
     end
+  end
 
+  def counts 
+    count = Hash.new(0)
 
+    self.each do |ele|
+      count[ele] += 1
+    end
+    count
   end
 end
