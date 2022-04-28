@@ -64,10 +64,8 @@ class Array
 
     debugger
     (0...self.length).each do |row|
-      p self[row]
       new_row = []
       (0...self.length).each do |col|
-        p self[col]
         new_row << self[col][row]
       end
       new_arr << new_row
