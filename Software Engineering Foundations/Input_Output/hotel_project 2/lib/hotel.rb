@@ -1,8 +1,12 @@
 require_relative "room"
 
 class Hotel
-  def initialize(name, room_names, capacities)
+  def initialize(name, capacities)
     @name = name
     @rooms = {}
+
+    capacities.each do |room_name, capacity|
+      @rooms[room_name] = Room.new(capacity)
+    end
   end
 end
