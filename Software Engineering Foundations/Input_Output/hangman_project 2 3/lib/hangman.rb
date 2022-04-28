@@ -51,8 +51,12 @@ class Hangman
     end
       @attempted_chars << char
 
-      matches = get_matching_indices(char)
-      
+      matches = self.get_matching_indices(char)
+      if matches.empty?
+        @remaining_incorrect_guesses -= 1
+      else
+        self.fill_indices(char, matches)
+      end
 
     true
   end
