@@ -1,4 +1,5 @@
 # Monkey-Patch Ruby's existing Array class to add your own custom methods
+require 'byebug'
 class Array
   def span
     return nil if self.length == 0
@@ -61,9 +62,12 @@ class Array
   def my_transpose
     new_arr = []
 
+    debugger
     (0...self.length).each do |row|
+      p self[row]
       new_row = []
       (0...self.length).each do |col|
+        p self[col]
         new_row << self[col][row]
       end
       new_arr << new_row
