@@ -25,6 +25,19 @@ class Hangman
   end
 
   def already_attempted?(char)
-    
+    @attempted_chars.include?(char)
   end
+
+  def get_matching_indices(char)
+    matching_indices = []
+
+    @secret_word.each_char.with_index do |ele, idx|
+      if ele == char
+        matching_indices << idx
+      end
+    end
+
+    matching_indices
+  end
+
 end
