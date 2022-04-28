@@ -61,5 +61,11 @@ class Hangman
 
     true
   end
+
+  def ask_user_for_guess
+    puts 'Enter a char: '
+    response = gets.chomp
+    self.try_guess(response)
+  end
 end
 
