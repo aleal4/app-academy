@@ -19,4 +19,20 @@ class Dog
   def age 
     @age
   end
+
+  def age=(age)
+    @age = age
+  end
+
+  def bark
+    if @age > 3
+      @bark.upcase
+    else @age <= 3
+      @bark.downcase
+    end
+  end
+
+  def favorite_foods
+    
+  end
 end
