@@ -57,4 +57,19 @@ class Array
     self.each {|ele| hash[ele] = true}
     hash.keys
   end
+
+  def my_transpose
+    new_arr = []
+
+    (0...self.length).each do |row|
+      new_row = []
+
+      (0...self.length).each do |col|
+        new_row << self[col][row]
+      end
+      new_arr << new_row
+    end
+
+    new_arr
+  end
 end
