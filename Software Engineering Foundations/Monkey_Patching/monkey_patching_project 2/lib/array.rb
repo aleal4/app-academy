@@ -11,6 +11,15 @@ class Array
   end
 
   def median
+    return nil if self.empty?
+
+    if self.length.odd?
+      middle = self.length / 2
+      return self.sort[middle]
+    else
+      
+    end
+
 
   end
 end
