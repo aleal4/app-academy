@@ -41,4 +41,14 @@ class Array
     end
     count
   end
+
+  def my_index(value)
+  
+    self.each_index do |index|
+      if self[index] == value
+        return index
+      end
+    end
+    nil
+  end
 end
