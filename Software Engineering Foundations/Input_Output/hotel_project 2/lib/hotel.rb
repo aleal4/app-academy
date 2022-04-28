@@ -9,4 +9,8 @@ class Hotel
       @rooms[room_name] = Room.new(capacity)
     end
   end
+
+  def name 
+    @name.split(" ").map(&:capitalize).join(" ")
+  end
 end
