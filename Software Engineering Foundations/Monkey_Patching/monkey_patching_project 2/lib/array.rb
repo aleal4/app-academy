@@ -30,4 +30,15 @@ class Array
     end
     count
   end
+
+  def my_count(value)
+    count = 0
+
+    self.each do |ele|
+      if ele == value
+        count += 1
+      end
+    end
+    count
+  end
 end
