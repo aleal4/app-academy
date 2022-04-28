@@ -88,10 +88,10 @@ class Hangman
     if self.win? || self.lose?
       puts @secret_word
       return true
-  end
+    end
 
-  false
-end
+    false
+  end
 
 end
 
